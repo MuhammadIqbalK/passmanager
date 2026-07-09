@@ -1,0 +1,7 @@
+node_modules/
+passwords.db
+passwords.db-*
+*.log
+.env
+data/
+.git/

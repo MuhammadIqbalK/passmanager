@@ -1,0 +1,16 @@
+services:
+  passmanager:
+    build: .
+    container_name: passmanager
+    ports:
+      - "3000:3000"
+    environment:
+      - MASTER_PASSWORD=${MASTER_PASSWORD:-changeme}
+      - DATA_DIR=/app/data
+      - PORT=3000
+    volumes:
+      - passmanager-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  passmanager-data:
