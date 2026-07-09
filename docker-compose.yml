@@ -10,7 +10,6 @@ services:
       - PORT=3000
     volumes:
       - passmanager-data:/app/data
-    restart: unless-stopped
 
 volumes:
   passmanager-data:
